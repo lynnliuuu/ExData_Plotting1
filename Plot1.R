@@ -1,6 +1,6 @@
 #read the  table and subset the data.frame
 t <- read.table("household_power_consumption.txt", header = TRUE, 
-                sep = ";", na.strings = "?",)
+                sep = ";", na.strings = "?")
 t$Date <- as.Date(t$Date,"%d/%m/%Y")
 t <- subset(t,t$Date >= "2007-02-01" & t$Date <= "2007-02-02")
 
